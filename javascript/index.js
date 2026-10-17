@@ -20,6 +20,16 @@
     newyorkTimeElement.innerHTML = newyorkTime.format("h:mm:ss[<small>]A[</small>]");
 
  }
+ let shanghaiElement = document.querySelector("#shanghai");
+  if(shanghaiElement){
+    let shanghaiDateElement = shanghaiElement.querySelector(".date");
+    let shanghaiTimeElement = shanghaiElement.querySelector(".time");
+    let shanghaiTime = moment().tz("Asia/Shanghai");
+    
+    shanghaiDateElement.innerHTML = shanghaiTime.format ("MMM Do YYYY");
+    shanghaiTimeElement.innerHTML = shanghaiTime.format("h:mm:ss[<small>]A[</small>]");
+
+ }
 }
 function updateCity(event){
   let cityTimeZone= event.target.value;
